@@ -8,6 +8,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { ProductFormComponent } from './products/product-form/product-form.component';
 import { ProductsListComponent } from './products/products-list/products-list.component';
 import { ProductService} from "./Services/product.service";
+import { ProductShowComponent } from './products/product-show/product-show.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ProductService} from "./Services/product.service";
     NavigationComponent,
     ProductFormComponent,
     ProductsListComponent,
+    ProductShowComponent,
   ],
   imports: [
     BrowserModule,

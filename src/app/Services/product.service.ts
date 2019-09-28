@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from "@angular/common/http";
-import {Product} from "../Models/Product";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -17,10 +16,10 @@ export class ProductService {
   item(slug){
     return this.client.get(this.API_URL+slug);
   }
-  create(product: Product){
+  create(product){
     return this.client.post(this.API_URL,product);
   }
-  update (slug, product: Product){
+  update (slug, product){
     return this.client.put(this.API_URL+slug,product);
   }
   delete(slug){
