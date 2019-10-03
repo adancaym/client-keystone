@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4" *ngFor="let store of list">
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          <h3>
+            {{store.name}}
+          </h3>
+        </div>
+
+        <img class="card-img-top img-responsive" *ngIf=" store.image " src="{{store.image.url}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text" *ngIf="store.address">
+            Calle: <strong> {{store.address.street}} </strong> <br>
+            Colonia: <strong> {{store.address.suburb}} </strong> <br>
+            Estado: <strong> {{store.address.state}} </strong> <br>
+            Codigo postal: <strong> {{store.address.zipCode}} </strong> <br>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a routerLink="/stores/show/{{store.slug}}">Ver productos</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

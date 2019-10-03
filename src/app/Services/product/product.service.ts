@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +7,7 @@ import {Observable} from "rxjs";
 export class ProductService {
 
   API_URL = 'http://localhost:3000/api/products/';
+
   constructor(private client: HttpClient) { }
 
   list(){
